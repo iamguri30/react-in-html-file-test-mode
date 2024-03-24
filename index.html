@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+        function MainPage() {
+            return (
+                <div>
+                    <Home />
+                    <About />
+                    <Products />
+                </div>
+            );
+        }
+
+        function Home() {
+            return <h1>This is home Section</h1>;
+        }
+        function About() {
+            return <h1>This is About Section</h1>;
+        }
+        function Products(){
+            return(
+                <div style={{display: "flex"}}>
+                    <div className="pro">
+                        <img src="https://gramentheme.com/html/addina/assets/imgs/furniture/product/product2.png" style={{width:"100%"}} alt=""/>
+                        </div>
+                    <div className="pro">
+                        <img src="https://gramentheme.com/html/addina/assets/imgs/furniture/product/product2.png" style={{width:"100%"}} alt=""/>
+                        </div>
+                    <div className="pro">
+                        <img src="https://gramentheme.com/html/addina/assets/imgs/furniture/product/product2.png" style={{width:"100%"}} alt=""/>
+                        </div>
+                </div>
+            )
+        }
+
+        const container = document.getElementById('mydiv');
+        const root = ReactDOM.createRoot(container);
+        root.render(<MainPage />)
+    </script>
+
+</body>
+
+</html>
